@@ -1,0 +1,22 @@
+{
+  "name": "frontend-natorous-saas-project",
+  "version": "1.0.0",
+  "description": "Npm initial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borgausifo/frontend-natorous-saas-project.git"
+  },
+  "author": "Borga Usifo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borgausifo/frontend-natorous-saas-project/issues"
+  },
+  "homepage": "https://github.com/borgausifo/frontend-natorous-saas-project#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
