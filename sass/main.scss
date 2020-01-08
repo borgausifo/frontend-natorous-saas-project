@@ -3,6 +3,8 @@ $color-primary: #55c57a;
 $color-primary-ligt: #7ed56f;
 $color-primary-dark: #28b485;
 $color-white: #fff;
+$color-black: black;
+
 
 
 *,
@@ -12,6 +14,7 @@ $color-white: #fff;
     padding: 0;
     box-sizing: inherit;
 }
+
 
 html {
     font-size: 62.5%;
@@ -41,30 +44,55 @@ body {
     background-position: top;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        /* top: 40px; */
+        /* left: 40px; */
+    }
+    &__logo {
+        height: 3.5rem;
+        /* height: 35px; */
+    
+    }
+    
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-    /* top: 40px; */
-    /* left: 40px; */
-}
-
-.header__logo {
-    height: 3.5rem;
-    /* height: 35px; */
-
-}
 
 
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+// .header__logo-box {
+//     position: absolute;
+//     top: 4rem;
+//     left: 4rem;
+//     /* top: 40px; */
+//     /* left: 40px; */
+// }
+
+// .header__logo {
+//     height: 3.5rem;
+//     /* height: 35px; */
+
+// }
+
+
+// .header__text-box {
+//     position: absolute;
+//     top: 40%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: center;
+// }
+
 
 .heading-primary {
     color: $color-white;
@@ -162,12 +190,12 @@ body {
 
 .btn:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
 }
 
 .btn:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
 
 }
 
