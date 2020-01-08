@@ -52,12 +52,12 @@ body {
         /* top: 40px; */
         /* left: 40px; */
     }
+
     &__logo {
         height: 3.5rem;
         /* height: 35px; */
     
     }
-    
     
     &__text-box {
         position: absolute;
@@ -101,38 +101,70 @@ body {
     backface-visibility: hidden;
     margin-bottom: 6rem;
     /* margin-bottom: 60px; */
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        /* font-size: 60px; */
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        /* letter-spacing: 35px; */
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+        /* animation-iteration-count: 3; */
+        /* animation-delay: 3s; check for google mozilla css*/
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        /* font-size: 20px; */
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        /* letter-spacing: 17.4px; */
+    
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+        /* animation: moveInRight 1s ease-out; */
+    }
 }
 
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    /* font-size: 60px; */
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /* letter-spacing: 35px; */
 
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+// .heading-primary--main {
+//     display: block;
+//     font-size: 6rem;
+//     /* font-size: 60px; */
+//     font-weight: 400;
+//     letter-spacing: 3.5rem;
+//     /* letter-spacing: 35px; */
 
-    /* animation-iteration-count: 3; */
-    /* animation-delay: 3s; check for google mozilla css*/
-}
+//     animation-name: moveInLeft;
+//     animation-duration: 1s;
+//     animation-timing-function: ease-out;
 
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    /* font-size: 20px; */
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    /* letter-spacing: 17.4px; */
+//     /* animation-iteration-count: 3; */
+//     /* animation-delay: 3s; check for google mozilla css*/
+// }
 
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+// .heading-primary--sub {
+//     display: block;
+//     font-size: 2rem;
+//     /* font-size: 20px; */
+//     font-weight: 700;
+//     letter-spacing: 1.75rem;
+//     /* letter-spacing: 17.4px; */
 
-    /* animation: moveInRight 1s ease-out; */
-}
+//     animation-name: moveInRight;
+//     animation-duration: 1s;
+//     animation-timing-function: ease-out;
+
+//     /* animation: moveInRight 1s ease-out; */
+// }
 
 @keyframes moveInLeft {
     0% {
@@ -178,58 +210,125 @@ body {
 }
 
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+    }
+    
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: #777;
+        padding: 1.5rem 4rem;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    // &--white::after {
+    //     background-color: $color-white;
+    // }
+    
+    // &:hover::after {
+    //     transform: scaleX(1.4) scaleY(1.6);
+    //     opacity: 0;
+    // }
+    
+    &--animated {
+        animation: moveInBottom .5 ease-out .75s;
+        animation-fill-mode: backwards;
+    }
 }
 
-.btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, .2);
-}
 
-.btn:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+// .btn:link,
+// .btn:visited {
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     display: inline-block;
+//     border-radius: 10rem;
+//     transition: all .2s;
+//     position: relative;
+// }
 
-}
+// .btn:hover {
+//     transform: translateY(-0.3rem);
+//     box-shadow: 0 1rem 2rem rgba($color-black, .2);
+// }
 
-.btn--white {
-    background-color: $color-white;
-    color: #777;
-    padding: 1.5rem 4rem;
-}
+// .btn:active {
+//     transform: translateY(-0.1rem);
+//     box-shadow: 0 .5rem 1rem rgba($color-black, .2);
 
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+// }
 
-.btn--white::after {
-    background-color: $color-white;
-}
+// .btn--white {
+//     background-color: $color-white;
+//     color: #777;
+//     padding: 1.5rem 4rem;
+// }
 
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+// .btn::after {
+//     content: "";
+//     display: inline-block;
+//     height: 100%;
+//     width: 100%;
+//     border-radius: 10rem;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -1;
+//     transition: all .4s;
+// }
 
-.btn--animated {
-    animation: moveInBottom .5 ease-out .75s;
-    animation-fill-mode: backwards;
-}
+// .btn--white::after {
+//     background-color: $color-white;
+// }
+
+// .btn:hover::after {
+//     transform: scaleX(1.4) scaleY(1.6);
+//     opacity: 0;
+// }
+
+// .btn--animated {
+//     animation: moveInBottom .5 ease-out .75s;
+//     animation-fill-mode: backwards;
+// }
 
 
