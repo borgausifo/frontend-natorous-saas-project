@@ -82,6 +82,8 @@
         color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .15);
         transform: translateY(-2px);
+        border-radius: 10rem;
+        padding: 0px 10px;
     }
 
     &:active {
